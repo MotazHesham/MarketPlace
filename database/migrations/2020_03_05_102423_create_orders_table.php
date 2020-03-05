@@ -21,7 +21,7 @@ class CreateOrdersTable extends Migration
             $table->string('customer_telephone');
             $table->string('price'); 
             $table->integer('id_seller')->unsigned();
-            $table->foreign('id_seller')->references('user_id')->on('users')->onDelete('cascade')->onUpdate('cascade');
+            $table->foreign('id_seller')->references('id')->on('users')->onDelete('cascade')->onUpdate('cascade');
             $table->integer('id_product')->unsigned();
             $table->foreign('id_product')->references('product_id')->on('products')->onDelete('cascade')->onUpdate('cascade');
             $table->timestamps();
