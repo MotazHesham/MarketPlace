@@ -27,11 +27,11 @@ class User extends Authenticatable
         'password', 'remember_token',
     ];
 
-    public order(){
+    public function order(){
         return $this->hasMany("app/order");
     }
 
-    public comment(){
+    public function comment(){
         return $this->hasMany("app/comment");
     }
 

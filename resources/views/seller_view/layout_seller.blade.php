@@ -4,10 +4,10 @@
 	<title>homepage</title>
 	<link rel="stylesheet" href="{{ asset('css/all.css') }}">
 	<link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}">
-	<link rel="stylesheet" href="{{ asset('css/frontend_customer_style.css') }}">
+	<link rel="stylesheet" href="{{ asset('css/frontend_seller_style.css') }}">
 </head>
 <body>
-	header <a href="{{ url('logout') }}">logout</a>
+	header seller <a href="{{ url('logout') }}">logout</a>
 	<hr>
 
 		<!-- start views -->

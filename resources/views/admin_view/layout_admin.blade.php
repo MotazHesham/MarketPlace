@@ -7,7 +7,7 @@
 	<link rel="stylesheet" href="{{ asset('css/backend_style.css') }}">
 </head>
 <body>
-	header admin
+	header admin <a href="{{ url('logout') }}">logout</a>
 	<hr>
 
 		<!-- start view sections -->

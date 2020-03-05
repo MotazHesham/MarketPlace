@@ -8,11 +8,11 @@ class Cart extends Model
 {
     //
 
-    public user(){
+    public function user(){
         return $this->hasMany("app/User");
     }
 
-    public product(){
+    public function product(){
         return $this->hasMany("app/Product");
     }
     
