@@ -5,6 +5,7 @@
 	<link rel="stylesheet" href="{{ asset('css/all.css') }}">
 	<link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}">
 	<link rel="stylesheet" href="{{ asset('css/backend_style.css') }}">
+	<link href="https://fonts.googleapis.com/css?family=Courgette|Lobster" rel="stylesheet">
 </head>
 <body>
 	header admin <a href="{{ url('logout') }}">logout</a>
