@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>homepage</title>
+	<title>homePage</title>
 	<link rel="stylesheet" href="{{ asset('css/all.css') }}">
 	<link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}">
 	<link rel="stylesheet" href="{{ asset('css/frontend_customer_style.css') }}">
@@ -76,7 +76,7 @@
 
 	<!-- start carousel -->
 
-		<div id="carouselExampleFade" class="carousel slide carousel-fade" data-ride="carousel">
+		<div id="carouselExampleFade" class="carousel slide carousel-fade" data-ride="carousel" style="margin-bottom: 30px">
 			<div class="carousel-inner">
 				<div class="carousel-item active">
 					<img src="{{ asset('images/trolley.jpg')}}" class="d-block w-100" alt="...">

@@ -1,11 +1,11 @@
 @extends('layout')
 
 @section('content')
-<div class="container">
+<div class="container jumbotron">
     <div class="row">
         <div class="col">
             <div class="panel panel-default register-form">
-                <h2 class="text-center">Register</h2>
+                <h1 class="text-center">Register</h1>
 
                 <div class="panel-body " style="margin-left: 25%">
                     <form class="form-horizontal" method="POST" action="{{ route('register') }}">
