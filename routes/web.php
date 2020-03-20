@@ -18,7 +18,7 @@ Route::get('/', function () {
 /*---------------- start admin routes ----------------*/
 
 	Route::get('admin/homepage', function () {
-	    return view('admin_view/statistics/statistics');
+	    return view('admin_view/statistics/statistics'); 
 	});
 
 	Route::get('admin/accounts', function () {
