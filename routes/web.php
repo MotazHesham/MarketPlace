@@ -11,79 +11,71 @@
 |
 */
 
-Route::get('/', function () {
-    return view('layout');
+use App\Category;
+use App\User;
+
+Route::get('/', 'CategoriesController@customer_index_category');
+
+Route::get('/logout', function () {
+	$user = User::find(auth()->user()->id);
+    $user ->login_status = 0;
+    $user->save();
+	Auth::logout();
+    return redirect("/");
 });
 
 /*---------------- start admin routes ----------------*/
 
-	Route::get('admin/homepage', function () {
-	    return view('admin_view/statistics/statistics'); 
-	});
+	Route::get('admin','HomeController@statistics');
 
-	Route::get('admin/accounts', function () {
-	    return view('admin_view/accounts/accounts');
-	});
+	Route::get('admin/accounts', 'UsersController@admin_accounts_index');
 
-	Route::get('admin/categories', function () {
-	    return view('admin_view/categories/categories');
-	});
+	Route::get('admin/categories', 'CategoriesController@admin_categories_index');
 
-	Route::get('admin/comments', function () {
-	    return view('admin_view/comments/comments');
-	});
+	Route::get('admin/comments', 'CommentsController@admin_comments_index');
 
-	Route::get('admin/products', function () {
-	    return view('admin_view/products/products');
-	});
+	Route::get('admin/products', 'ProductsController@admin_products_index');
 		
 /*---------------- end admin routes ----------------*/
 
 		
 /*----------------start customer routes----------------*/			
 
-	Route::get('cart', function () {
-	    return view('cart/cart');
+	/*Route::get('customer/cart', function () {
+	    return view('customer_view/cart/cart');
 	});
 
-	Route::get('orders', function () {
-	    return view('orders/orders');
+	Route::get('customer/orders', function () {
+	    return view('customer_view/orders/orders');
 	});
 
-	Route::get('products', function () {
-	    return view('products/products');
+	Route::get('customer/products', function () {
+	    return view('customer_view/products/products');
 	});
 
-	Route::get('profile', function () {
-	    return view('profile/profile');
+	Route::get('customer/profile', function () {
+	    return view('customer_view/profile/profile');
 	});
-	Route::get('categories', function () {
-	    return view('categories/categories');
-	});
+	Route::get('customer/categories', function () {
+	    return view('customer_view/categories/categories');
+	});*/
 
 		
 /*---------------- end customer routes ----------------*/
 
 /*---------------- start seller routes ----------------*/
 
-	Route::get('seller/homepage', function () {
-	    return view('seller_view/products/products');
-	});
-
+	Route::get('seller', 'ProductsController@seller_index_products');
+	/*
 	Route::get('seller/orders', function () {
 	    return view('seller_view/orders/orders');
 	});
 
 	Route::get('seller/profile', function () {
 	    return view('seller_view/profile/profile');
-	});
+	});*/
 		
 /*---------------- end seller routes ----------------*/
-
-Route::get('/logout', function () {
-	Auth::logout();
-    return redirect("home");
-});
 
 Auth::routes();
 

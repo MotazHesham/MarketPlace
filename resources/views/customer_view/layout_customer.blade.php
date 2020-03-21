@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Seller</title>
+	<title>homePage</title>
 	<link rel="icon" href="{{ asset('images/icon2.png') }}">
 	<link rel="stylesheet" href="{{ asset('css/all.css') }}">
 	<link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}">
-	<link rel="stylesheet" href="{{ asset('css/seller.css') }}">
+	<link rel="stylesheet" href="{{ asset('css/customer.css') }}">
 	<link href="https://fonts.googleapis.com/css?family=Courgette|Lobster" rel="stylesheet">
 </head>
 <body>
@@ -13,18 +13,18 @@
 	<!-- -------------------------------------------------------- -->
 	<!-- -------------------------------------------------------- -->
 
-		<!-- start navbar -->
+		<!-- Start NavBar -->
 
-			@include('seller_view/navbar')
+			@include('customer_view/navbar')
 
-		<!-- end navbar -->	
+		<!-- End NavBar -->
 
 	<!-- -------------------------------------------------------- -->
 	<!-- -------------------------------------------------------- -->	
 
 		<!-- start carousel -->
 
-			@include('seller_view/carousel')
+			@include('customer_view/carousel')
 
 		<!-- end carousel -->
 
@@ -33,15 +33,15 @@
 
 		<!-- start views -->
 
-			<div class="main main-raised">
+			<div class="main-raised">
 				@include('messages')
 				@yield('content')
-			</div>
-			
+			</div>	
+
 		<!-- end views -->
 
 	<!-- -------------------------------------------------------- -->
-	<!-- -------------------------------------------------------- -->
+	<!-- -------------------------------------------------------- -->	
 
 		<!-- start footer -->
 
@@ -57,6 +57,7 @@
 
 	<script src="{{ asset('js/jquery.min.js') }}"></script>
 	<script src="{{ asset('js/bootstrap.min.js') }}"></script>
+	<script src="{{ asset('js/my_script_chat.js') }}"></script>
 	<script src="{{ asset('js/my_script.js') }}"></script>
 </body>
 </html>

@@ -3,7 +3,11 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use App\Comment;
+use App\Product;
+use App\Category;
+use App\User;
+use DB;
 class HomeController extends Controller
 {
     /**
@@ -23,12 +27,26 @@ class HomeController extends Controller
      */
     public function index()
     {   
-        if(auth()->user() && auth()->user()->role==0){
-            return view('home');
-        }elseif(auth()->user() && auth()->user()->role==1){
-            return view('seller_view/layout_seller');
-        }elseif(auth()->user() && auth()->user()->role==2){
-            return view('admin_view/layout_admin');
-        }
+        if(auth()->user()){
+
+            $user = User::find(auth()->user()->id);
+            $user ->login_status = 1;
+            $user->save();
+
+            if( auth()->user()->role==0 ){
+                return redirect('/');
+            }elseif( auth()->user()->role==1 ){
+                return redirect('seller');
+            }elseif( auth()->user()->role==2 ){
+                return redirect('admin');
+            }
+        }    
     }
+
+
+    public function statistics(){
+        return view('admin_view/statistics/statistics');
+    }
+
+
 }

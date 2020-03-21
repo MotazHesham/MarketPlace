@@ -1,0 +1,126 @@
+
+/* ----------------------------------------------------------------*/
+/* ----------------------------------------------------------------*/
+
+	/*Start Navbar */
+		.navbar{
+			background-color:#60117600;
+		}
+		.navbar-brand{
+			margin-left: 60px;
+			font-family: 'Lobster', cursive;
+			font-size: 38px;
+		    font-weight: 500;
+		}
+
+		.navbar-nav{
+			margin-left: 35px;
+		}
+
+		.right-items-nav{
+			margin-right: 30px;
+			color:#FFF;
+			font-weight: 600;
+		}
+		.navbar-login,
+		.navbar-register{
+			font-family: 'Courgette', cursive;
+		}
+
+		.nav-item{
+			margin:28px auto;
+			margin-left: 55px;
+		}
+		.nav-link{
+			color:#FFF;
+		}
+
+		.nav-item a:hover{
+			color: #9fb0a9;
+		}
+
+		.dropdown-menu{
+			min-width: 200px;
+			background-color: #FFF;
+		}
+		.dropdown-item{
+			-webkit-transition:padding 0.5s ease;
+			-moz-transition:padding 0.5s ease;
+			-o-transition:padding 0.5s ease;
+			transition:padding 0.5s ease;
+			color: black;
+		}
+
+		.dropdown-item:hover, .dropdown-item:focus{
+			background-color: #601176;
+			color: #FFF;
+			padding-left: 30px;
+		}
+
+		.categories-menu a:hover,
+		.profile-image-menu a:hover{
+			color:#FFF;
+		}
+
+		.nav-scrolling{
+			height:75px;
+			background-color: black;
+			transition:background-color 1.5s ease;
+		}
+
+		.user-img-nav img{
+			height: 50px;
+			width: 50px;
+			border-radius: 50%;
+			cursor:pointer;
+		}
+		.user-img-nav img:hover{
+			box-shadow: 3px 3px 14px #7b7b7b;
+		}
+
+
+	/*End Navbar */
+
+/* ----------------------------------------------------------------*/
+/* ----------------------------------------------------------------*/
+
+	/* Start Carousel*/
+
+		.carousel-inner{
+			height: 600px !important;
+		}
+
+		.carousel-inner:after{
+		    position: absolute;
+		    z-index: 1;
+		    width: 100%;
+		    height: 600px;
+		    display: block;
+		    left: 0;
+		    top: 0;
+		    content: "";
+		    background: rgba(0,0,0,.5);	
+		}
+
+	/* End Carousel*/
+
+/* ----------------------------------------------------------------*/
+/* ----------------------------------------------------------------*/
+
+
+	/* Start Views */
+	
+		.main-raised{
+			background: #FFF;
+		    position: relative;
+		    z-index: 3;
+			margin: -85px 60px 0;
+	  		border-radius: 6px;
+	  		box-shadow: 0 16px 24px 2px rgba(0,0,0,.14), 0 6px 30px 5px rgba(0,0,0,.12), 0 8px 10px -5px rgba(0,0,0,.2);
+	  		padding: 50px;
+		}
+
+	/* End Views */
+
+/* ----------------------------------------------------------------*/
+/* ----------------------------------------------------------------*/

@@ -1,0 +1,1 @@
+/* this is script chatting js file*/
