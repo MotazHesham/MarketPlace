@@ -90,3 +90,88 @@
 		}
 
 	/*end views*/
+
+h1{
+	font-family: 'Courgette', cursive;
+}
+h1 span{
+	color:#007bff;
+	font-weight: bolder;
+}
+.header-view p{
+	color:#888;
+	margin-bottom: 70px
+}
+
+
+/* ----------------------------------------------------------------*/
+/* ----------------------------------------------------------------*/
+
+.home-stat{
+	margin-bottom: 30px;
+}
+.home-stat .stat{
+	padding: 10px;
+}
+.home-stat .stat .card-title{
+	font-size: 40px;
+}
+.total-members{
+	background-color: #528088;
+	box-shadow: 4px 5px 15px #528088;
+}
+.total-items{
+	background-color: #625288;
+	box-shadow: 4px 5px 15px #625288;
+}
+.total-pending-items{
+	background-color: #88526d;
+	box-shadow: 4px 5px 15px #88526d;
+}
+.total-comments{
+	background-color: #888152;
+	box-shadow: 4px 5px 15px #888152;
+}
+
+
+.latest .card{
+	box-shadow: 7px 3px 11px #c1a8a8;
+	margin-bottom:30px
+}
+.latest .card-item{
+	padding: 10px
+}
+.latest .card-item:nth-of-type(odd){
+	background-color: #EEE;
+}
+.latest .comment-box{
+	padding: 10px
+}
+.latest .comment-box .comment-owner,
+.latest .comment-box .comment-content{
+	display:inline-block;
+}
+.latest .comment-box .comment-owner{
+	margin-bottom: 16px;
+}
+.latest .comment-box .comment-content{
+	margin-left: 10px;
+	background-color: #EFEFEF;
+	position: relative;
+	padding: 10px;
+	width: 95%
+}
+.latest .comment-box .comment-content:before{
+	content: "";
+	display: block;
+	position: absolute;
+	top: -23px;
+	left: 17px;
+	border-style: solid;
+	border-width: 15px;
+	border-color: transparent transparent #EFEFEF transparent;
+}
+/* End Statistics */
+
+/* ----------------------------------------------------------------*/
+/* ----------------------------------------------------------------*/

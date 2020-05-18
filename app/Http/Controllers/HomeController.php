@@ -8,6 +8,7 @@ use App\Product;
 use App\Category;
 use App\User;
 use DB;
+use app\order;
 class HomeController extends Controller
 {
     /**
@@ -45,8 +46,30 @@ class HomeController extends Controller
 
 
     public function statistics(){
-        return view('admin_view/statistics/statistics');
+       $count_comments = count (comment ::all());
+        $count_products = count (product ::all());
+        $count_users = count (user ::all());
+        $count_pending_products = count(product ::where('approve',0)->get());
+        $latest_5_users = user::orderby('created_at','Desc')->take(5)->get();
+        $latest_5_comments = comment::orderby('created_at','Desc')->take(5)->get();
+        $latest_5_products = product::orderby('created_at','Desc')->take(5)->get();
+        $data = [
+            'comments' => $count_comments,
+             'products'=>$count_products  ,
+            'users'=>$count_users,
+            'pending'=>$count_pending_products,
+            'user'=>$latest_5_users,
+            'latest_comment'=>$latest_5_comments,
+            'latest_products'=>$latest_5_products
+        ];
+
+        return view('admin_view/statistics/statistics')->with('data' , $data);
+
+
     }
+
+
+
 
 
 }
