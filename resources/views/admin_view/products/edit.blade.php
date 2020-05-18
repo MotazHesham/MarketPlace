@@ -4,7 +4,7 @@
 
 
 <div class="container text-center header-view">
-	<h1>Add New <span>Product</span></h1>
+	<h1>Edit <span>Product</span></h1>
 	<p>here you can add new items to specific category and view it to all customers .....</p>
 </div>
 

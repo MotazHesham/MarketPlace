@@ -3,44 +3,29 @@
 @section('content')
 
 
-<div class="container">
-   <h3 class="pb-3 mb-4 font-italic border-bottom">
-      Product Card
-   </h3>
+<div class="container text-center header-view">
+   <h1>Manage Your <span>Categories</span></h1>
+        <p>here you can manage all your categories... edit and delete whatever you want</p>
+</div>
+<div class="row">
 
-   <div class="row">
-      <div class="col-md-4">
-         <div class="card 1">
-            <img class="card-img-top" src="/storage/uploads/mobile.png" alt="Card image cap">
-            <div class="card-body">
-               <h5 class="card-title">Mobiles</h5>
-               <p class="card-text">we have many types of this product</p>
-               <a href="http://www.google.com/" class="btn btn-outline-dark btn-sm">Go somewhere</a>
-            </div>
-         </div>
-      </div>
-      <div class="col-md-4">
-         <div class="card 2">
-            <img class="card-img-top" src="/storage/uploads/laptop.png" alt="Card image cap">
-            <div class="card-body">
-               <h5 class="card-title">Laptops</h5>
-               <p class="card-text"><?php Echo"we have many types of this product" ?></p>
-               <a href="http://www.google.com/" class="btn btn-outline-dark btn-sm">Go somewhere</a>
-            </div>
-         </div>
-      </div>
-      <div class="col-md-4">
-         <div class="card 3">
-            <img class="card-img-top" src="/storage/uploads/watch.png" alt="Card image cap">
-            <div class="card-body">
-               <h5 class="card-title">Watches</h5>
-               <p class="card-text">we have many types of this product</p>
-               <a href="http://www.google.com/" class="btn btn-outline-dark btn-sm">Go somewhere</a>
-            </div>
-         </div>
-      </div>
-   </div>
-   <h3 class="mt-3 pb-3 mb-4 font-italic border-bottom">
+ @foreach($categories as $category)
+   <div class="col">
+      <div class="card item-part" style="width: 18rem;">
+         <img src="/storage/uploads/{{$category->img}}" class="card-img-top" alt="Product1">
+           <div class="card-body text-center" >
+                  <h2 class="card-title">{{$category->name}}</h2>
+                  <h6 class="card-subtitle mb-2 text-muted">{{$category->description}}</h6>
+                   <a href="/admin/categories/edit/{{$category->id}}" style="color: white;" class="btn btn-primary"><i class="far fa-edit"></i> Edit</a>
+                   <a href="/admin/categories/destroy/{{$category->id}}  " style="color: white;" class="btn btn-danger"><i class="fas fa-trash"></i> Delete</a>
+           </div>
+     </div>
+  </div>
+
+@endforeach
+
+
+</div>
 
 
 

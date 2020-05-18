@@ -4,9 +4,9 @@
 
  
     <div class="container text-center header-view">
-    <h1>Manage Your <span>Items</span></h1>
-    <p>here you can manage all your items in shop ...edit or delete anything</p>
-</div>
+      <h1>Manage Your <span>Items</span></h1>
+      <p>here you can manage all your items in shop ...edit or delete anything</p>
+    </div>
 
 <div class="row">
 

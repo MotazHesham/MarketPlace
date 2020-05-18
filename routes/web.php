@@ -42,6 +42,11 @@ Route::get('/logout', function () {
 
 	Route::get('admin/products/destroy/{id}', 'ProductsController@admin_product_destroy');	
 
+	Route::get('admin/categories/edit/{id}', 'CategoriesController@admin_categories_edit');	
+
+	Route::put('admin/categories/confirm/{id}', 'CategoriesController@admin_categories_confirm_edit');
+
+    Route::get('admin/categories/destroy/{id}', 'CategoriesController@admin_categories_destroy');
 
 /*---------------- end admin routes ----------------*/
 
