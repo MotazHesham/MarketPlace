@@ -4,7 +4,7 @@
 @section('content')
 
 	<div class="container text-center header-view">
-		<h1>Dashboard</h1>
+		<h1 style="color: black;" >Dashboard</h1>
 		<p>here you can see statistics of your website ..... </p>
 	</div>
 
