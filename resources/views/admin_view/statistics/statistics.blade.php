@@ -73,10 +73,6 @@
 									@foreach($data['user'] as $user)
 									<dd style="text-align: left">  {{$user->name }}  </dd>
 										<dd style="text-align: right">  {{calculate_diff_date($user->created_at  )}} </dd>
-
-										<dd style="position: relative;">{{$user->img }}</dd>
-
-
 								</dl>
 								@endforeach
 							</div>
@@ -96,10 +92,6 @@
 									@foreach($data['latest_products'] as $product)
 										<dd style="text-align: left">  {{$product->name }}  </dd>
 										<dd style="text-align: right"> {{calculate_diff_date($product->created_at  )}} </dd>
-
-										<dd style="position: relative;">{{$product->img }}</dd>
-
-
 								</dl>
 								@endforeach
 							</div>
@@ -114,10 +106,10 @@
 						<div class='comment-box'>
 							@foreach($data['latest_comment'] as $comment)
 
-
 							<span class='comment-owner'>
-								{{$comment->user->img}}
-								 </span>
+								<img src="/storage/uploads/{{$comment->user->img}}" style="height: 50px;width: 50px;border-radius: 50px">
+								 {{ $comment->user->name }}
+							</span>
 
 							<span class='comment-content'>
                                    {{$comment->comment }}

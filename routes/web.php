@@ -35,7 +35,14 @@ Route::get('/logout', function () {
 	Route::get('admin/comments', 'CommentsController@admin_comments_index');
 
 	Route::get('admin/products', 'ProductsController@admin_products_index');
-		
+
+	Route::get('admin/products/edit/{id}', 'ProductsController@admin_products_edit');	
+
+	Route::put('admin/products/confirm/{id}', 'ProductsController@admin_products_confirm_edit');
+
+	Route::get('admin/products/destroy/{id}', 'ProductsController@admin_product_destroy');	
+
+
 /*---------------- end admin routes ----------------*/
 
 		
