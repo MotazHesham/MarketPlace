@@ -94,3 +94,5 @@ Route::get('/logout', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('/deleteuser/{id}','UsersController@delete');
