@@ -46,7 +46,9 @@ Route::get('/logout', function () {
 
 	Route::put('admin/categories/confirm/{id}', 'CategoriesController@admin_categories_confirm_edit');
 
-    Route::get('admin/categories/destroy/{id}', 'CategoriesController@admin_categories_destroy');
+	Route::get('admin/categories/destroy/{id}', 'CategoriesController@admin_categories_destroy');
+
+	Route::get('admin/comments/destroy/{id}', 'commentsController@admin_comments_destroy');
 
 /*---------------- end admin routes ----------------*/
 
