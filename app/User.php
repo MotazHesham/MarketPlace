@@ -28,15 +28,19 @@ class User extends Authenticatable
     ];
 
     public function order(){
-        return $this->hasMany("app/order");
+        return $this->hasMany("App\Order",'id_user');
+    }
+
+    public function product(){
+        return $this->hasMany("App\Product",'id_user');
     }
 
     public function comment(){
-        return $this->hasMany("app/comment");
+        return $this->hasMany("App\Comment",'id_user');
     }
 
     public function cart(){
-        return $this->belongsTo("app/Cart");
+        return $this->belongsTo("App\Cart",'id_user');
     }
     
 

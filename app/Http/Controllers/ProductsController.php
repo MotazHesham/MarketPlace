@@ -34,7 +34,8 @@ class ProductsController extends Controller
     }
 
     public function customer_product_details($id){
-        return view('customer_view.products.show');
+        $product = Product::find($id);
+        return view('customer_view.products.show')->with('product',$product);
     }
 
     public function admin_products_edit($id){
