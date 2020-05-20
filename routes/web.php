@@ -36,9 +36,7 @@ Route::get('/logout', function () {
 
 	Route::get('admin/products', 'ProductsController@admin_products_index');
 
-	Route::get('admin/products/edit/{id}', 'ProductsController@admin_products_edit');	
-
-	Route::put('admin/products/confirm/{id}', 'ProductsController@admin_products_confirm_edit');
+	Route::get('admin/products/approve/{id}', 'ProductsController@admin_products_approve');	
 
 	Route::get('admin/products/destroy/{id}', 'ProductsController@admin_product_destroy');	
 
@@ -66,6 +64,7 @@ Route::get('/logout', function () {
 	Route::get('customer/cart/{id}', 'CartsController@customer_cart');
 
 	Route::get('customer/orders', 'OrderController@customer_order');
+
 
 	Route::get('customer/products/details/{id}','ProductsController@customer_product_details');
 

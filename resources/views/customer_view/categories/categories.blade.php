@@ -10,28 +10,33 @@
 <hr>
 
 <div class="category-view">
-
+  
 	<div class="row">
 
+
 		<div class="col">
+
 
 			<div class="text-center our-categories-text">
 				<p style="">BROWSE PRODUCTS BY</p>
 	   			<h1 style="">OUR CATEGORIES</h1>
 			</div>
-
+  
 			<div class="row our-categories justify-content-md-center">
 
-				 	<a href="#">
+			@foreach($categories as $category)
+		<a href="customer/products/of/category/{{$category->id}}">
 						<div class="col mt-4">
 						 	<div style="position: relative;">
 						 		<div class="category-overlay">
-						 			<p class="text-center" style="">Name</p>
+						 			<p class="text-center" style="">{{$category->name}}</p>
 						 		</div>
-								<img src="/storage/uploads/empty.jpg" class="card-img" alt="...">
+								<img src="/storage/uploads/{{$category->img}}" class="card-img" alt="...">
 						  	</div>
 						</div>	
 					</a>
+			@endforeach
+
 
 			</div>
 
