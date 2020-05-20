@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Product;
 use App\Category;
+use Illuminate\Support\Facades\DB;
 
 class ProductsController extends Controller
 {
@@ -21,11 +22,15 @@ class ProductsController extends Controller
 
     public function product_of_category($id){
         $category = Category::find($id);
-        $category_name = $category->name;
-        $data = [
-            'category_name' => $category_name
-        ];
-        return view('customer_view.products.products')->with('data',$data);
+        $data=DB::table('products')->where([
+
+            ['id_category','=',$id],
+            ['approve','=',0]
+        ])
+            ->get();
+
+        return view ('customer_view.products.products')->with('data', $data);
+
     }
 
     public function customer_product_details($id){
@@ -86,5 +91,7 @@ class ProductsController extends Controller
         $Product->delete(); 
         return back()->with('success','Product Removed');
     }
+
+
 
 }
