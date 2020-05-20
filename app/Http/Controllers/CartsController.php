@@ -5,22 +5,20 @@ namespace App\Http\Controllers;
 use App\Category;
 use App\User;
 use Illuminate\Http\Request;
-<<<<<<< HEAD
+
 use App\Product;
 use App\Cart;
 
-class CartsController extends Controller
-{
-
-=======
 use Illuminate\Support\Facades\Storage;
-use App\Category;
+
 use App\comment;
-use App\Product;
-use App\User;
-use App\Cart;
+
+
 use App\product_of_cart;
 use DB;
+
+
+
 
 class CartsController extends Controller
 {
@@ -44,7 +42,7 @@ class CartsController extends Controller
         $cart_product->pivot->save();
     }
     
->>>>>>> df7fee4060975723d315e94cd71e338291d8c518
+
 }
 
 
