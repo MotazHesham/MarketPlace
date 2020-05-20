@@ -24,7 +24,18 @@
 
 		<!-- start carousel -->
 
-			@include('customer_view/carousel')
+			<div style="height: 680px;
+						background-color: royalblue;
+						position: relative;">
+				<img src="{{ asset('images/online_shopping.svg') }}" style="height: 500px;
+						    position: absolute;
+						    top: 16%;
+						    left: 10%;">
+			    <img src="{{ asset('images/shopping_app.svg') }}" 	 style="height: 500px;
+						    position: absolute;
+						    top: 14%;
+						    right:5%;">
+			</div>
 
 		<!-- end carousel -->
 

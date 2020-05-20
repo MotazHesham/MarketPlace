@@ -14,7 +14,7 @@
 use App\Category;
 use App\User;
 
-Route::get('/', 'CategoriesController@customer_index_category');
+Route::get('/', 'CategoriesController@customer_categories');
 
 Route::get('/logout', function () {
 	$user = User::find(auth()->user()->id);
@@ -50,36 +50,34 @@ Route::get('/logout', function () {
 
 	Route::get('admin/comments/destroy/{id}', 'commentsController@admin_comments_destroy');
 
+	Route::get('/deleteuser/{id}','UsersController@delete_user');
+
 /*---------------- end admin routes ----------------*/
 
 		
 /*----------------start customer routes----------------*/			
+	
 
-	/*Route::get('customer/cart', function () {
-	    return view('customer_view/cart/cart');
-	});
+	Route::get('customer', 'CategoriesController@customer_categories');
 
-	Route::get('customer/orders', function () {
-	    return view('customer_view/orders/orders');
-	});
 
-	Route::get('customer/products', function () {
-	    return view('customer_view/products/products');
-	});
+	Route::get('customer/products/of/category/{id}','ProductsController@product_of_category');
 
-	Route::get('customer/profile', function () {
-	    return view('customer_view/profile/profile');
-	});
-	Route::get('customer/categories', function () {
-	    return view('customer_view/categories/categories');
-	});*/
+	Route::get('customer/cart', 'CartsController@customer_cart');
+
+	Route::get('customer/orders', 'OrderController@customer_order');
+
+	Route::get('customer/products/details/{id}','ProductsController@customer_product_details');
+
+	Route::get('customer/profile','UsersController@customer_profile')->name('profile');
+	
+	Route::get('customer/edit/profile/{id}','UsersController@customer_edit_profile');
 
 		
 /*---------------- end customer routes ----------------*/
 
 /*---------------- start seller routes ----------------*/
 
-	Route::get('seller', 'ProductsController@seller_index_products');
 	/*
 	Route::get('seller/orders', function () {
 	    return view('seller_view/orders/orders');
@@ -94,5 +92,3 @@ Route::get('/logout', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
-
-Route::get('/deleteuser/{id}','UsersController@delete');

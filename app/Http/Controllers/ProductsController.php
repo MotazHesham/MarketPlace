@@ -19,6 +19,19 @@ class ProductsController extends Controller
     	return view('seller_view.products.products')->with('categories',$categories);
     }
 
+    public function product_of_category($id){
+        $category = Category::find($id);
+        $category_name = $category->name;
+        $data = [
+            'category_name' => $category_name
+        ];
+        return view('customer_view.products.products')->with('data',$data);
+    }
+
+    public function customer_product_details($id){
+        return view('customer_view.products.show');
+    }
+
     public function admin_products_edit($id){
     	$product = Product::find($id);
         $categories = Category::all();

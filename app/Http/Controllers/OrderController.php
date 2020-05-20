@@ -6,5 +6,7 @@ use Illuminate\Http\Request;
 
 class OrderController extends Controller
 {
-    //
+    public function customer_order(){
+    	return view('customer_view.orders.orders');
+    }
 }

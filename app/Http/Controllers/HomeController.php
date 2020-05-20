@@ -35,7 +35,7 @@ class HomeController extends Controller
             $user->save();
 
             if( auth()->user()->role==0 ){
-                return redirect('/');
+                return redirect('customer');
             }elseif( auth()->user()->role==1 ){
                 return redirect('seller');
             }elseif( auth()->user()->role==2 ){

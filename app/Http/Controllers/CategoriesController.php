@@ -9,9 +9,8 @@ class CategoriesController extends Controller
 {
     
 
-    public function customer_index_category(){
-        $categories = Category::all();
-        return view('customer_view.categories.categories')->with('categories',$categories);
+    public function customer_categories(){
+        return view('customer_view.categories.categories');
     }
 
 
@@ -65,7 +64,7 @@ class CategoriesController extends Controller
             return back()->with('success','Category updated');
     }
 
- public function admin_categories_destroy($id)
+    public function admin_categories_destroy($id)
     {
         $Category = Category::find($id);
         $Category->delete(); 

@@ -14,12 +14,18 @@ class UsersController extends Controller
         Return view ('admin_view.accounts.accounts')->with('users' , $users);
     }
 
-    public function delete($id)
-    {
+    public function customer_profile(){
+    	return view('customer_view.profile.profile');
+    }
 
+    public function customer_edit_profile($id){
+    	return view('customer_view.profile.edit');
+    }
+
+    public function delete_user($id)
+    {
         User::find($id)->delete();
         return back();
-
     }
 
 }

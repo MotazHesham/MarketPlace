@@ -12,7 +12,7 @@
  @foreach($categories as $category)
    <div class="col">
       <div class="card item-part" style="width: 18rem;">
-         <img src="/storage/uploads/{{$category->img}}" class="card-img-top" alt="Product1">
+         <img src="/storage/uploads/{{$category->img}}" class="card-img-top" alt="...">
            <div class="card-body text-center" >
                   <h2 class="card-title">{{$category->name}}</h2>
                   <h6 class="card-subtitle mb-2 text-muted">{{$category->description}}</h6>
