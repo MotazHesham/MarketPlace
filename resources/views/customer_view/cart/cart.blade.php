@@ -3,7 +3,7 @@
 @section('content')
 
 	
-		<div class="container text-center header-view">
+	<div class="container text-center header-view">
 		<h1><span>Shopping Cart</span></h1>
 		<p></p>
 	</div>
@@ -14,37 +14,41 @@
 			<div class="shopping-cart">
 			 
 			  <!-- Products  -->
+			  @foreach($cart->product as $product)
 				  <div class="item" >
 
 				    <div class="close">
-				      <a href='/cart/delete/2' class="far fa-times-circle" style="cursor: pointer;color: black"></a>
+				      <a href='/cart/delete/{{ $product->id }}' class="far fa-times-circle" style="cursor: pointer;color: black"></a>
 				    </div>
 				 
 				    <div class="image">
-				      <img src="/storage/uploads/beach.jpg" alt="" />
+				      <img src="/storage/uploads/{{ $product->img }}" alt="" />
 				    </div>
 				 
 				    <div class="Item-Name">
-				      name
+				      {{ $product->name }}
 				    </div>
 				 
-				    <div class="quantity" id="quantity_1">
+				    <div class="quantity" id="quantity_{{ $product->id }}">
 
-				      <button class="minus-btn" type="button" name="button" data-productid="2" data-cartid="1">
+				      <button class="minus-btn" type="button" name="button" data-productid="{{ $product->id }}" data-cartid="{{  $cart->id  }}">
 				        <i class="fas fa-minus"></i>
 				      </button>
 
-				      <input type="text" name="name" value="1" disabled="">
+				      <input type="text" name="name" value="{{ $product->pivot->quntity }}" disabled="">
 
-				      <button class="plus-btn" type="button" name="button" data-productid="2" data-cartid="3">
+				      <button class="plus-btn" type="button" name="button" data-productid="{{ $product->id }}" data-cartid="{{  $cart->id  }}">
 				        <i class="fas fa-plus"></i>
 				      </button>
 				      
 				    </div>
-				 
-				    <div class="total-price" id="total-price_2">$<span>price</span></div>
+				 	
+				    <div style="display: none" class="product-price" id="product-price_{{$product->id}}">{{$product->price}}</div>
+
+				    <div class="total-price-of-product" id="total-price-of-product_{{ $product->id }}">$<span>{{ ($product->price)*($product->pivot->quntity) }}</span></div>
 
 				  </div>
+			  @endforeach
 			 
 			</div>
 		</div>	
@@ -163,7 +167,7 @@
 
 			<input type="hidden" name="total_price_cart"  id="total-price-hidden-input">
 			<input type="hidden" name="id_user" value="{{ Auth::user()->id }}" >
-			<input type="hidden" name="id_cart" value="3" >
+			<input type="hidden" name="id_cart" value="{{ $cart->id }}" >
 
 			<div class="form-group">
 			    <input type="submit" class="btn btn-success btn-block"  value="CheckOut">
