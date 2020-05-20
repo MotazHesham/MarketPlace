@@ -61,7 +61,7 @@
              <div class="dropdown-menu" aria-labelledby="navbarDropdown" style="top: 53px;right: 12px;">
                <div class="text-center"><i class="fa fa-user" style="color:violet"></i> {{Auth::user()->name}}</div>
                <div class="dropdown-divider"></div>
-               <a class="dropdown-item" href="{{ route('profile') }}">Profile</a>
+                 <a class="dropdown-item" href="/customer/profile/{{Auth:: user()->id}}">Profile</a>
                <a class="dropdown-item" href="{{ route('logout') }}">Sign Out</a>
              </div>    
            </li>

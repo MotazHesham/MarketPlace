@@ -69,7 +69,7 @@ Route::get('/logout', function () {
 
 	Route::get('customer/products/details/{id}','ProductsController@customer_product_details');
 
-	Route::get('customer/profile','UsersController@customer_profile')->name('profile');
+	Route::get('customer/profile/{id}','UsersController@customer_profile')->name('profile');
 	
 	Route::get('customer/edit/profile/{id}','UsersController@customer_edit_profile');
 

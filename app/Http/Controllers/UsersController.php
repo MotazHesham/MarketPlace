@@ -14,8 +14,10 @@ class UsersController extends Controller
         Return view ('admin_view.accounts.accounts')->with('users' , $users);
     }
 
-    public function customer_profile(){
-    	return view('customer_view.profile.profile');
+    public function customer_profile($id){
+
+        $user = User::find($id);
+    	return view('customer_view.profile.profile')->with('user' , $user);
     }
 
     public function customer_edit_profile($id){
