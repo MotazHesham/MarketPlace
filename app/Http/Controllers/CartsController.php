@@ -41,6 +41,13 @@ class CartsController extends Controller
         $cart_product->pivot->quntity = $quantity;
         $cart_product->pivot->save();
     }
+    public function customer_cart_delete($id)
+    {
+        
+        $carts = Cart::where('id_user',auth()->user()->id)->get();
+        $carts[0]->product()->wherePivot('product_id','=',$id)->detach();
+        return back()->with('success','product Removed');
+    }
     
 
 }

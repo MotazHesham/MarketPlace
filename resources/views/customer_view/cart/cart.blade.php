@@ -18,7 +18,7 @@
 				  <div class="item" >
 
 				    <div class="close">
-				      <a href='/cart/delete/{{ $product->id }}' class="far fa-times-circle" style="cursor: pointer;color: black"></a>
+				      <a href='/customer/cart/delete/{{ $product->id }}' class="far fa-times-circle" style="cursor: pointer;color: black"></a>
 				    </div>
 				 
 				    <div class="image">

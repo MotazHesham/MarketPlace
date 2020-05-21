@@ -63,6 +63,8 @@ Route::get('/logout', function () {
 
 	Route::get('customer/products/of/category/{id}','ProductsController@product_of_category');
 
+	Route::get('customer/cart/delete/{product_id}', 'CartsController@customer_cart_delete');
+
 	Route::get('customer/cart/{id}', 'CartsController@customer_cart');
 
 	Route::get('customer/orders', 'OrderController@customer_order');
@@ -73,11 +75,13 @@ Route::get('/logout', function () {
 	
 	Route::get('customer/edit/profile/{id}','UsersController@customer_edit_profile');
 
-
 	Route::get('update/quantity/{quantity}/{product_id}/{cart_id}','CartsController@update_quantity');
 
 	Route::post('comments/insert-comment','CommentsController@insert_comment');
+
 	Route::get('comments/fetch/{id}','CommentsController@fetch_comments');
+
+
 
 		
 /*---------------- end customer routes ----------------*/
