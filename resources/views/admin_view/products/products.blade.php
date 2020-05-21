@@ -18,7 +18,8 @@
                   <h2 class="card-title">{{$product->name}}</h2>
                   <h6 class="card-subtitle mb-2 text-muted">{{$product->description}}</h6>
  
-                   <a href="/admin/products/edit/{{$product->id}}" style="color: white;" class="btn btn-primary"><i class="far fa-edit"></i> Edit</a>
+                 @if($product->approve==0)  <a href="/admin/products/approve/{{$product->id}}" style="color: white;" class="btn btn-primary"><i class="far fa-edit"></i> approve</a> 
+                 @endif
                    <a href="/admin/products/destroy/{{$product->id}}	" style="color: white;" class="btn btn-danger"><i class="fas fa-trash"></i> Delete</a>
            </div>
      </div>

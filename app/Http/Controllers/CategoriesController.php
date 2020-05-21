@@ -8,9 +8,10 @@ use App\Category;
 class CategoriesController extends Controller
 {
     
-
+    
     public function customer_categories(){
-        return view('customer_view.categories.categories');
+        $categories = Category::all();
+        return view('customer_view.categories.categories')->with('categories',$categories);
     }
 
 

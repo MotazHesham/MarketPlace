@@ -14,7 +14,7 @@
 
 		<div class="col">
 			<div class="upload-img">
-				<img id="img" src="/storage/uploads/beach.jpg" name="img">
+				<img id="img" src="/storage/uploads/{{$product->img}}" name="img">
 			</div>
 		</div>
 
@@ -22,11 +22,10 @@
 			<div class="card">
 			  <h5 class="card-header text-center">Item Info</h5>
 			  <div class="card-body profile-info">
-			    <div>Name : <span>name</span> </div>
-			    <div>Description : <span>description</span> </div>
-			    <div>Date : <span>date</span> </div>
-			    <div>Price : <span>price</span> </div>
-			    <div>Seller : <span><a href="#">seller name </a></span> </div>
+			    <div>Name : <span>{{$product->name}}</span> </div>
+			    <div>Description : <span>{{$product->description}}</span> </div>
+			    <div>Price : <span>{{$product->price}}</span> </div>
+			    <div>Seller : <span><a href=" ">{{$product->user->name}} </a></span> </div>
 			  </div>
 			</div>
 		</div>
