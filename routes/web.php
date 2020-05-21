@@ -67,6 +67,7 @@ Route::get('/logout', function () {
 
 	Route::get('customer/orders', 'OrderController@customer_order');
 
+	Route::post('order/cart','OrderController@order_form');
 
 	Route::get('customer/products/details/{id}','ProductsController@customer_product_details');
 

@@ -82,7 +82,7 @@
 	</div>
 
 	<div class="container">
-		<form action="/orders" method="post">
+		<form action="/order/cart" method="post">
 			{{ csrf_field() }}
 		  	<div class="form-row">
 			    <div class="form-group col-md-6">
