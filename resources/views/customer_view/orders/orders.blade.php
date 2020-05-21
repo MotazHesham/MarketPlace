@@ -7,9 +7,10 @@
 		<h1>Lates Orders</h1>
 		<p></p>
 	</div>
-
+	@foreach($data as $order)
 	<div class="row">
 
+     
 		<div class="col-md-7">
 			<div class="shopping-cart">
 
@@ -55,10 +56,10 @@
 					<h4><span class="price" style="color:black"><i class="fas fa-truck" style="color: #569a91"></i></span> Order</h4>
 					<hr>
 
-						<p style="padding: 10px">Telephone: <b>312</b></p>
-						<p style="padding: 10px">Address: <b>4wq</b></p>
-						<p style="padding: 10px">City: <b>asdf</b></p>
-						<p style="padding: 10px">State: <b>gasdf</b></p>
+						<p style="padding: 10px">Telephone: <b>{{ $order->telephone }}</b></p>
+						<p style="padding: 10px">Address: <b>{{ $order->address}}</b></p>
+						<p style="padding: 10px">City: <b>{{ $order->city }}</b></p>
+						<p style="padding: 10px">State: <b>{{ $order->state }}</b></p>
 					<div style="background-color: #00800073;
 														    padding: 12px;
 														    border-radius: 10px 21px;
@@ -71,6 +72,7 @@
 		</div>
 
 	</div>
+	@endforeach
 
 	<hr class="mt-5 mb-5">
 
