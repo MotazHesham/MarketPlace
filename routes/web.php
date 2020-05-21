@@ -72,7 +72,9 @@ Route::get('/logout', function () {
 
 	Route::get('customer/profile/{id}','UsersController@customer_profile')->name('profile');
 	
-	Route::get('customer/edit/profile/{id}','UsersController@customer_edit_profile');
+	Route::get('customer/profile/edit/{id}','UsersController@customer_edit_profile');
+
+	Route::put('customer/profile/confirm/{id}', 'UsersController@customer_profile_confirm_edit');
 
 	Route::get('update/quantity/{quantity}/{product_id}/{cart_id}','CartsController@update_quantity');
 

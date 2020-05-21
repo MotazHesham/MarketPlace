@@ -3,8 +3,9 @@
 @section('content')
 
 
+
 <div class="container text-center header-view">
-	<h1>Edit [<span> name </span>] Profile </h1>
+	<h1>Edit [<span> {{ $user->name }} </span>] Profile </h1>
 	<p>here you can edit your info ....like (name,age.....etc)</p>
 </div>
 
@@ -12,7 +13,7 @@
 
 	<div class="container">
 
-		<form action="#" method="POST" enctype="multipart/form-data">
+		<form action="/customer/profile/confirm/{{ $user->id }}" method="POST" enctype="multipart/form-data">
 			{{ csrf_field() }}
 			<input type="hidden" name="_method" value="put">
 		  <div class="form-row"><!-- this has two [col] first for img and second for fields of the form   -->
@@ -21,7 +22,7 @@
 			    <div class="form-group col-lg-6 col-md-7 upload-img">
 
 			    	<input type="file" id="upload" class="form-control" name="img" style="" />
-			    	<img id="img" src="/storage/uploads/beach.jpg" name="img" >
+			    	<img id="img" src="/storage/uploads/{{ $user->img }}" name="img" >
 			    	<!-- overlay upload img  -->
 			    	<div class="overlay-upload-img text-center">
 			    		<div><i class="far fa-edit"></i> Update</div>
@@ -39,7 +40,7 @@
 
 			    <div class="form-group col-md-6">
 			      <label for="inputUserName">Email</label>
-			      <input type="text" class="form-control" name="email" value="email from db" id="inputUserName" required="required">
+			      <input type="text" class="form-control" name="email" value="{{ $user->email }}" id="inputUserName" required="required">
 			    </div>
 
 			    <div class="form-group col-md-6">
@@ -55,7 +56,7 @@
 
 				<div class="form-group col-lg">
 			      <label for="inputFullName">FullName</label>
-			      <input type="text" class="form-control" name="name" value="naae from db" id="inputFullName" required="required">
+			      <input type="text" class="form-control" name="name" value="{{ $user->name }}" id="inputFullName" required="required">
 			    </div>
 
 			  	<div class="form-group col-md-4">
@@ -68,7 +69,7 @@
 
 			    <div class="form-group col-md-2">
 			      <label for="inputAge">Age</label>
-			      <input type="text" class="form-control" name="age" value="age from db" id="inputAge" required="required">
+			      <input type="text" class="form-control" name="age" value="{{ $user->age }}" id="inputAge" required="required">
 			    </div>
 
 			  </div>  

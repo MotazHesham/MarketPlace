@@ -34,7 +34,7 @@
 			    <div>Age : <span>{{$user->age}}</span> </div>
 			    <div>Gender : <span>{{$user->gender}}</span></div>
 			  </div>
-			  <a href="" class="btn btn-success" style="color:white"><i class="far fa-edit"></i> Edit</a>
+			  <a href="/customer/profile/edit/{{$user->id}}" class="btn btn-success" style="color:white"><i class="far fa-edit"></i> Edit</a>
 			</div>
 
 		</div>
