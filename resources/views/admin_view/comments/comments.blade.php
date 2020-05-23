@@ -27,9 +27,9 @@
 					<td>{{ $comment->user->name }}</td>
 					<td>{{ $comment->product->name }}</td>
 					<td>{{ $comment->comment }}</td>
-					<td> <span style='color:grey;font-size:10px'>{{ calculate_diff_date($comment->created_at) }}</span></td>
+					<td> <span style='color:grey;font-size:12px'>{{ calculate_diff_date($comment->created_at) }}</span></td>
 					<td>
-						<a href='/admin/comments/destroy/{{$comment->id}}' class='btn btn-danger'><i class='fas fa-trash'></i> Delete</a>
+						<a href='/admin/comments/destroy/{{$comment->id}}' class='btn btn-danger confirm'><i class='fas fa-trash'></i> Delete</a>
 					</td>
 				</tr>
 			@endforeach

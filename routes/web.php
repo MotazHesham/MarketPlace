@@ -17,9 +17,6 @@ use App\User;
 Route::get('/', 'CategoriesController@customer_categories');
 
 Route::get('/logout', function () {
-	$user = User::find(auth()->user()->id);
-    $user ->login_status = 0;
-    $user->save();
 	Auth::logout();
     return redirect("/");
 });
@@ -48,7 +45,14 @@ Route::get('/logout', function () {
 
 	Route::get('admin/comments/destroy/{id}', 'commentsController@admin_comments_destroy');
 
+	Route::get('admin/product/details/{id}', 'ProductsController@admin_product_details');
+
+	Route::get('admin/profile/edit/{id}','UsersController@admin_edit_profile');
+
+	Route::put('admin/profile/confirm/{id}', 'UsersController@admin_profile_confirm_edit');
+
 	Route::get('/deleteuser/{id}','UsersController@delete_user');
+	
 
 /*---------------- end admin routes ----------------*/
 
@@ -69,7 +73,7 @@ Route::get('/logout', function () {
 
 	Route::post('order/cart','OrderController@order_form');
 
-	Route::get('customer/products/details/{id}','ProductsController@customer_product_details');
+	Route::get('customer/product/details/{id}','ProductsController@customer_product_details');
 
 	Route::get('customer/profile/{id}','UsersController@customer_profile')->name('profile');
 	
@@ -83,21 +87,14 @@ Route::get('/logout', function () {
 
 	Route::get('comments/fetch/{id}','CommentsController@fetch_comments');
 
-   Route ::post ('add/product','CartsController@add_product')->name('add.product');
+    Route::post ('add/product','CartsController@add_product')->name('add.product');
 
 		
 /*---------------- end customer routes ----------------*/
 
 /*---------------- start seller routes ----------------*/
 
-	/*
-	Route::get('seller/orders', function () {
-	    return view('seller_view/orders/orders');
-	});
-
-	Route::get('seller/profile', function () {
-	    return view('seller_view/profile/profile');
-	});*/
+	
 		
 /*---------------- end seller routes ----------------*/
 

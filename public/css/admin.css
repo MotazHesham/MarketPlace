@@ -94,6 +94,51 @@ h1 span{
 /* ----------------------------------------------------------------*/
 /* ----------------------------------------------------------------*/
 
+	/* Start Product view*/
+
+		.product_view .overlay_product{
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			padding-top: 35%;
+			background-color:#ffffff00;
+			-webkit-transition:background-color 0.4s ease;
+			-moz-transition:background-color 0.4s ease;
+			-o-transition:background-color 0.4s ease;
+			transition:background-color 0.4s ease;
+		}
+
+		.product_view .overlay_product a{
+			font-size: 20px;
+			position: relative;
+			left: 66%;
+			-webkit-transition:left 0.4s ease;
+			-moz-transition:left 0.4s ease;
+			-o-transition:left 0.4s ease;
+			transition:left 0.4s ease;
+		}
+
+		.product_view .product_part {
+			box-shadow: 4px 3px 19px #ab9a9a;
+			overflow-x: hidden;
+			margin-bottom: 30px
+		}
+
+		.product_view .product_part:hover .overlay_product{
+			background-color: #3c393982;
+			
+		}
+		.product_view .product_part:hover a{
+			left: 0
+		}
+
+	/* End Product view*/
+
+/* ----------------------------------------------------------------*/
+/* ----------------------------------------------------------------*/
+
 	/*start views*/
 
 		.page-content{

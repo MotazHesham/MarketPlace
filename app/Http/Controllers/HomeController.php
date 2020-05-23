@@ -30,10 +30,6 @@ class HomeController extends Controller
     {   
         if(auth()->user()){
 
-            $user = User::find(auth()->user()->id);
-            $user ->login_status = 1;
-            $user->save();
-
             if( auth()->user()->role==0 ){
                 return redirect('customer');
             }elseif( auth()->user()->role==1 ){

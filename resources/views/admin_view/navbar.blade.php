@@ -27,10 +27,10 @@
         <!-- <a class="nav-link" href="../index.php" target="_blanc">
           <span class="fa fa-hashtag mr-3"></span>Visit Shop
         </a> -->
-        <div style="color: #95d0e2;margin-top: 20px;margin-bottom: 5px;font-size: x-large;font-family: 'Lobster', cursive;text-align: center;">
-           Your Info: <b style="color: white;font-weight: 400;">{{ Auth::user()->name }}</b> <span class="fa fa-user mr-3" style="color: white"></span>
+        <div style="color: #95d0e2;margin-top: 20px;margin-bottom: 5px;font-size: x-large;font-family: 'Lobster', cursive;margin-left: 22%;">
+           <img src="/storage/uploads/{{Auth::user()->img}}" style="width: 50px;height: 50px;border-radius: 50px">  <b style="color: white;font-weight: 400;">  {{ Auth::user()->name }}</b>
         </div>
-        <a class="nav-link" href="/admin/profile/{{ Auth::user()->id }}">
+        <a class="nav-link" href="/admin/profile/edit/{{ Auth::user()->id }}">
           <span class="fa fa-cog mr-3"></span>EditProfile
         </a>
         

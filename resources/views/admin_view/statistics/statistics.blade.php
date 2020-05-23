@@ -115,8 +115,9 @@
                                    {{$comment->comment }}
 					    			<div class='text-right' style='font-size:13px;color:black'> {{calculate_diff_date($comment->created_at  )}} </div>
 				    			</span>
+
+							@endforeach
 						</div>
-						@endforeach
 					</div>
 				</div>
 

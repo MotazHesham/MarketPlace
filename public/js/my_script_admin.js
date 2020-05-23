@@ -1,7 +1,13 @@
 $(document).ready(function(){
 	"use strict";
 
-/* function change img preview when edit item ... before upload page */
+	/* function to sure that you want delete the item*/
+	$('.confirm').on("click",function ()
+	{
+		return confirm("Are You Sure Delete ?");
+	});
+
+	/* function change img preview when edit item ... before upload page */
 	$('#upload').change(function(){
 	    var input = this;
 	    var url = $(this).val();

@@ -26,7 +26,7 @@ class ProductsController extends Controller
         $data=DB::table('products')->where([
 
             ['id_category','=',$id],
-            ['approve','=',0]
+            ['approve','=',1]
         ])
             ->get();
 
@@ -38,6 +38,12 @@ class ProductsController extends Controller
         $product = Product::find($id);
         return view('customer_view.products.show')->with('product',$product);
     }
+
+    public function admin_product_details($id){
+        $product = Product::find($id);
+        return view('Admin_view.products.show')->with('product',$product);
+    }
+
 
     public function admin_products_approve($id){
     	$product = Product::find($id);

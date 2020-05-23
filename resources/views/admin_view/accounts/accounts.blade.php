@@ -34,7 +34,7 @@
 					<td>{{$row->email}}</td>
 					<td>{{$row->role}}</td>
 					<td>{{$row->gender}}</td>
-					<th>{{$row->age}}</th>
+					<td>{{$row->age}}</td>
 					<td>{{calculate_diff_date($row->created_at)}}</td>
 					<td>
 						<a href='/deleteuser/{{$row->id}}' class='btn btn-danger confirm'><i class='fas fa-trash'></i> Delete</a>

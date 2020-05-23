@@ -51,9 +51,6 @@
            </li>
            @else
            <li class="nav-item">
-             <a data-userid="{{ Auth::user()->id }}" id="open_contacts" class="fab fa-facebook-messenger" style="color:white;cursor:pointer;font-size: 30px;margin-top: 10px;margin-right: -20px;"></a>
-           </li>
-           <li class="nav-item">
              <a href="/customer/cart/{{Auth::user()->id}}" class="fa fa-shopping-cart" style="color:white;cursor:pointer;font-size: 30px;margin-top: 10px;margin-right: -20px;"></a>
            </li>
            <li class="user-img-nav nav-item dropdown profile-image-menu dropleft">

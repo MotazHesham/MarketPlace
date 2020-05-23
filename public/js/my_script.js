@@ -1,6 +1,17 @@
 $(document).ready(function(){
 	"use strict";
 
+	/* function to sure that you want delete the item*/
+	$('.confirm').on("click",function ()
+	{
+		return confirm("Are You Sure Delete ?");
+	});
+
+	$('#order_now').click(function() {
+	   $('html, body').animate({
+        	scrollTop: $("#order_form").offset().top
+    	}, 1000);
+	});
 	//navbar scrolling animation
 	$(window).on("scroll",function()
 	{
