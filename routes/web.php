@@ -83,7 +83,7 @@ Route::get('/logout', function () {
 
 	Route::get('comments/fetch/{id}','CommentsController@fetch_comments');
 
-
+   Route ::post ('add/product','CartsController@add_product')->name('add.product');
 
 		
 /*---------------- end customer routes ----------------*/

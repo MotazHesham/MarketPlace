@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\User;
 use Illuminate\Http\Request;
 use App\Product;
 use App\Category;
@@ -52,6 +53,7 @@ class ProductsController extends Controller
         $Product->delete(); 
         return back()->with('success','Product Removed');
     }
+
 
 
 

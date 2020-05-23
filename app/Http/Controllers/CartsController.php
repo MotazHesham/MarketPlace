@@ -35,6 +35,24 @@ class CartsController extends Controller
         }
     }
 
+    public function add_product (Request $request){
+
+        $user_role = User::find($request->role);
+
+
+        if ($request->role == 0) {
+            $cart = User::find($request->cart_id);
+            $new_product=  $cart->products()->attach($request->product_id);
+            return view('customer_view.cart.cart')->with($new_product);}
+
+        else{
+
+            return view('auth.register');
+        }
+
+
+    }
+
     public function update_quantity($quantity,$product_id,$cart_id){
         $cart = Cart::find($cart_id);
         $cart_product = $cart->product()->find($product_id);
